@@ -1,0 +1,253 @@
+format = """
+$username\
+${custom.dbus}$shell\
+$os$hostname
+$all
+$jobs$character\
+"""
+
+# format = "$all"
+
+[os]
+disabled = false
+format = "[ $symbol]($style)"
+style = 'fg:#192000 bold bg:#b2e82e'
+
+[shell]
+disabled = false
+style = 'bright-white bold bg:#4f2cff'
+format = "[$indicator]($style)"
+zsh_indicator = ""
+nu_indicator = "  nu "
+
+[hostname]
+ssh_only = false
+ssh_symbol = " "
+format = "[$ssh_symbol$hostname ]($style)[▓▒░](fg:#b2e82e)"
+style = "fg:#192000 bold bg:#b2e82e"
+
+[character]
+success_symbol = "[❯](bold green)"
+vimcmd_symbol = "[❯](bold green)"
+vimcmd_replace_one_symbol = "[❯](bold purple)"
+vimcmd_replace_symbol = "[❯](bold purple)"
+vimcmd_visual_symbol = "[❯](bold yellow)"
+
+[battery]
+display = [
+  { threshold = 70, charging_symbol = "[󰂄](bright-green bold) ", discharging_symbol = "󰂀 ", style = "bright-green bold" },
+  { threshold = 60, charging_symbol = "[󰂄](bright-green bold) ", discharging_symbol = "󰁿 ", style = "bright-green bold" },
+  { threshold = 50, charging_symbol = "[󰂄](bright-green bold) ", discharging_symbol = "󰁾 ", style = "bright-green bold" },
+  { threshold = 40, charging_symbol = "[󰂄](bright-green bold) ", discharging_symbol = "󰁽 ", style = "bright-yellow bold" },
+  { threshold = 30, charging_symbol = "[󰂄](bright-green bold) ", discharging_symbol = "󰁼 ", style = "bright-yellow bold" },
+  { threshold = 20, charging_symbol = "[󰂄](bright-green bold) ", discharging_symbol = "󰁻 ", style = "bright-yellow bold" },
+  { threshold = 10, charging_symbol = "[󰂄](bright-yellow bold) ", discharging_symbol = "󱃍 ", style = "bright-red bold" },
+]
+
+[username]
+format = "[  $user ]($style)"
+style_root = "bold bg:red white"
+style_user = "bold bg:blue white"
+
+[rust]
+symbol = " "
+detect_folders = ["src-tauri"]
+style = "bold bright-red"
+
+[bun]
+symbol = "󰳮 "
+style = "bold bright-yellow"
+
+[time]
+disabled = false
+format = "[at](bright-black) [$time]($style) "
+style = "bold bright-black"
+
+[custom.dbus]
+when = "$UNDER_DBUS_SESSION"
+shell = "zsh"
+symbol = " 󱇰 DBus "
+style = "bold bg:bright-yellow black"
+
+[line_break]
+disabled = true
+
+[aws]
+symbol = "󰅟 "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " 󰏯 "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[git_status]
+conflicted = "󱈸"
+ahead = ""
+behind = ""
+diverged = ""
+up_to_date = ""
+untracked = ""
+stashed = ""
+modified = "󰄯"
+staged = ""
+renamed = "󰏫"
+deleted = ""
+typechanged = "󰑥"
+
+[golang]
+symbol = "󰟓 "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = "󰲒 "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+style = "red"
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = "󰎙 "
+
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = "󰂚 "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = "󰣭 "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = "󰕈 "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[gradle]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[deno]
+symbol = " "
