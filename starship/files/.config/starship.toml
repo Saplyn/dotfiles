@@ -2,7 +2,7 @@ format = """
 $username\
 ${custom.dbus}$shell\
 $os$hostname
-$all
+$directory$direnv$all
 $jobs$character\
 """
 
@@ -62,6 +62,18 @@ style = "bold bright-yellow"
 disabled = false
 format = "[at](bright-black) [$time]($style) "
 style = "bold bright-black"
+time_format = "%b %d %T"
+
+[direnv]
+disabled = false
+format = "[$symbol$allowed$loaded]($style) "
+style = "bold cyan"
+symbol = " "
+allowed_msg = "󰸞"
+not_allowed_msg = ""
+denied_msg = ""
+loaded_msg = ""
+unloaded_msg = ""
 
 [custom.dbus]
 when = "$UNDER_DBUS_SESSION"
