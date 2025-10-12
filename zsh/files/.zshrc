@@ -119,16 +119,22 @@ source $ZSH/oh-my-zsh.sh
 PATH="$HOME/lyn/bin:$PATH"
 EDITOR="$(which nvim)"
 ## LYN: Proxy (https://forum.manjaro.org/t/pamac-behind-proxy/123773/8)
-# http_proxy=http://127.0.0.1:7890
-# https_proxy=http://127.0.0.1:7890
-# ftp_proxy=http://127.0.0.1:7890
-# rsync_proxy=http://127.0.0.1:7890
+# http_proxy=http://localhost:7890
+# HTTP_PROXY=http://localhost:7890
+# https_proxy=http://localhost:7890
+# HTTPS_PROXY=http://localhost:7890
+# ftp_proxy=http://localhost:7890
+# FTP_PROXY=http://localhost:7890
+# rsync_proxy=http://localhost:7890
+# RSYNC_PROXY=http://localhost:7890
 # no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
 # alias proxify="http_proxy=$http_proxy https_proxy=$http_proxy"
 ## LYN: Aliases
 alias timg="timg -p k"
 alias gedit="gnome-text-editor"
 alias nux="nu -c"
+## LYN: Mistype-able
+alias tmuxa="tmux a"
 
 # LYN: Starship
 eval "$(starship init zsh)"
@@ -149,7 +155,7 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 ## [/Completion]
 
 # LYN: Node
-eval "$(fnm env)"
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 
 # LYN: Go
 PATH="$HOME/go/bin:$PATH"
