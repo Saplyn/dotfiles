@@ -55,7 +55,7 @@ detect_folders = ["src-tauri"]
 style = "bold bright-red"
 
 [bun]
-symbol = "󰳮 "
+symbol = " "
 style = "bold bright-yellow"
 
 [time]
@@ -259,7 +259,7 @@ symbol = " "
 symbol = " "
 
 [cmake]
-symbol = " "
+symbol = " "
 
 [deno]
-symbol = " "
+symbol = " "

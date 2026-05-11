@@ -79,6 +79,8 @@ plugins=(
   eza
   bun
   zig-shell-completions
+  rust
+  colored-man-pages
   direnv
 )
 
@@ -133,6 +135,7 @@ EDITOR="$(which nvim)"
 alias timg="timg -p k"
 alias gedit="gnome-text-editor"
 alias nux="nu -c"
+alias antlr="antlr4"
 ## LYN: Mistype-able
 alias tmuxa="tmux a"
 
@@ -178,8 +181,17 @@ else
   export UNDER_DBUS_SESSION=false
 fi
 
+# LYN: Completions
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit
+compinit
+
+# LYN: ZVM
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
+
 # LYN: SDKMAN
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
